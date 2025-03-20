@@ -23,7 +23,7 @@ while cap.isOpened():
     # Convert BGR to RGB (MediaPipe uses RGB input)
     frame_rgb = cv2.cvtColor(frame, cv2.COLOR_BGR2RGB)
 
-    # Process frame and detect hands
+    # detect hands
     results = hands.process(frame_rgb)
 
     # Check if any hands are detected
@@ -39,12 +39,8 @@ while cap.isOpened():
                 print(f'Landmark {idx}: ({cx}, {cy})')
 
 
-    # Display output
+    # Display the frame
     cv2.imshow('Hand Tracking', frame)
-
-    # Exit on 'q key
-    # if cv2.waitKey(1) & 0xFF == ord('q'):
-    #     break
 
     if cv2.waitKey(5) & 0xFF == ord('q'):
         break
