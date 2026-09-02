@@ -18,7 +18,7 @@ import mediapipe as mp
 import numpy as np
 import pygame
 
-from drum_sounds import make_sounds
+from audio.drum_sounds import make_sounds
 
 # ---------------------------------------------------------------- tuning ----
 VEL_THRESHOLD = 1.1     # downward speed (normalized screen heights/sec) to count as a strike
